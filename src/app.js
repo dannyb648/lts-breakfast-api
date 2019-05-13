@@ -1,14 +1,18 @@
 const express = require("express");
-
-require("dotenv").config();
+const cors = require("cors");
+const bodyParser = require("body-parser");
+const config = require('./config');
 
 const app = express();
-const { PORT } = process.env;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
-app.listen(PORT);
-console.log(`Central Server listening on port ${PORT}`);
+app.listen(config.port);
+console.log(`Central Server listening on port ${config.port}`);
+
+app.get("/api/test", (req, res) => {
+  res.status(200).send({ text: "hello" });
+});
 
 module.exports = app;
