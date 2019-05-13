@@ -1,0 +1,9 @@
+{
+  "name": "lts-breakfast-api",
+  "version": "0.0.1",
+  "description": "API for LittleTeaShop API ",
+  "main": "src/app.js",
+  "author": "Dan Beglin <dbeglinuk@gmail.com>",
+  "license": "MIT",
+  "private": false
+}
